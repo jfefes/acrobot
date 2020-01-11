@@ -47,7 +47,7 @@ def handle_command(command, channel):
         Executes bot command if the command is known
     """
     # Default response is help text for the user
-    default_response = "Not sure what you mean. You should add it!"
+    default_response = "Not sure what you mean. You should add it here: or contact @james.fefes !"
 
     with open('acronyms.json') as json_file:
         acronyms = json.load(json_file)
@@ -56,7 +56,7 @@ def handle_command(command, channel):
     response = None
 
     if command.lower() in acronyms.keys():
-        response = acronyms[command]
+        response = acronyms[command.lower()]
 
     # Sends the response back to the channel
     slack_client.api_call(
