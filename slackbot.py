@@ -47,7 +47,7 @@ def handle_command(command, channel):
         Executes bot command if the command is known
     """
     # Default response is help text for the user
-    default_response = "Not sure what you mean. You should add it here: https://github.com/tendrilinc/acrobot/blob/master/acronyms.json or contact @james.fefes !"
+    default_response = "I don't know what that is. Post about it in #acrobot-support!"
 
     with open('acronyms.json') as json_file:
         acronyms = json.load(json_file)
