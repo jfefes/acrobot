@@ -7,3 +7,7 @@ Run tests!
 - make a virtual environment
 - pip install
 - `make test`
+
+
+Deploy: `git push heroku`
+Also do this, on first deploy only: `heroku ps:scale worker=1`
